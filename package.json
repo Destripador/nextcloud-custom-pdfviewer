@@ -1,17 +1,17 @@
 {
-  "name": "files_pdfviewer",
+  "name": "custompdfviewer",
   "description": "PDF viewer plugin for Nextcloud",
   "version": "5.0.0-dev.0",
   "author": "John Molakvoæ <skjnldsv@protonmail.com>",
   "contributors": [],
   "bugs": {
-    "url": "https://github.com/nextcloud/files_pdfviewer/issues"
+    "url": "https://github.com/destripador/custompdfviewer/issues"
   },
   "repository": {
-    "url": "https://github.com/nextcloud/files_pdfviewer",
+    "url": "https://github.com/destripador/custompdfviewer",
     "type": "git"
   },
-  "homepage": "https://github.com/nextcloud/files_pdfviewer",
+  "homepage": "https://github.com/destripador/custompdfviewer",
   "license": "AGPL-3.0-or-later",
   "private": true,
   "scripts": {
