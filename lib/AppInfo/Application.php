@@ -5,10 +5,10 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-namespace OCA\Files_PDFViewer\AppInfo;
+namespace OCA\CustomPDFViewer\AppInfo;
 
-use OCA\Files_PDFViewer\Listeners\CSPListener;
-use OCA\Files_PDFViewer\Listeners\LoadViewerListener;
+use OCA\CustomPDFViewer\Listeners\CSPListener;
+use OCA\CustomPDFViewer\Listeners\LoadViewerListener;
 
 use OCA\Viewer\Event\LoadViewer;
 
@@ -19,12 +19,12 @@ use OCP\AppFramework\Bootstrap\IRegistrationContext;
 use OCP\Security\CSP\AddContentSecurityPolicyEvent;
 
 // Listener
-use OCA\Files_PDFViewer\Listeners\LoadFileListListener;
+use OCA\CustomPDFViewer\Listeners\LoadFileListListener;
 use OCA\Files\Event\LoadAdditionalScriptsEvent;
 
 
 class Application extends App implements IBootstrap {
-	public const APP_ID = 'files_pdfviewer';
+	public const APP_ID = 'custompdfviewer';
 
 	public function __construct() {
 		parent::__construct(self::APP_ID);

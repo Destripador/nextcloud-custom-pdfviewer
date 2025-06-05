@@ -5,10 +5,10 @@
  * SPDX-FileCopyrightText: 2014-2016 ownCloud, Inc.
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
-namespace OCA\Files_PDFViewer\Tests\Unit\Controller;
+namespace OCA\CustomPDFViewer\Tests\Unit\Controller;
 
-use OCA\Files_PDFViewer\AppInfo\Application;
-use OCA\Files_PDFViewer\Controller\DisplayController;
+use OCA\CustomPDFViewer\AppInfo\Application;
+use OCA\CustomPDFViewer\Controller\DisplayController;
 use OCP\AppFramework\Http\ContentSecurityPolicy;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\IRequest;

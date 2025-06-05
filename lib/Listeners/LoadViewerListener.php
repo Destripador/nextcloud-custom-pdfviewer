@@ -5,9 +5,9 @@ declare(strict_types=1);
  * SPDX-FileCopyrightText: 2020 Nextcloud GmbH and Nextcloud contributors
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
-namespace OCA\Files_PDFViewer\Listeners;
+namespace OCA\CustomPDFViewer\Listeners;
 
-use OCA\Files_PDFViewer\AppInfo\Application;
+use OCA\CustomPDFViewer\AppInfo\Application;
 use OCA\Viewer\Event\LoadViewer;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
@@ -21,6 +21,6 @@ class LoadViewerListener implements IEventListener {
 		if (!$event instanceof LoadViewer) {
 			return;
 		}
-		Util::addScript(Application::APP_ID, 'files_pdfviewer-main', 'viewer');
+		Util::addScript(Application::APP_ID, 'custompdfviewer-main', 'viewer');
 	}
 }

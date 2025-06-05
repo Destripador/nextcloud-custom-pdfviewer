@@ -4,11 +4,11 @@ import { translate as t } from '@nextcloud/l10n'
 import icon from '../img/document.svg'
 
 registerFileAction({
-	id: 'openCustomPDFViewer',
+	id: 'custompdf',
 	apps: ['files'],
 	mimes: ['application/pdf'],
 	permissions: OC.PERMISSION_READ,
-	displayName: () => t('files_pdfviewer', 'Abrir visor PDF'),
+	displayName: () => t('custompdfviewer', 'Abrir visor PDF'),
 	iconSvgInline: () => icon,
 	enabled: (nodes, view) => {
 		if (!nodes || nodes.length !== 1) {

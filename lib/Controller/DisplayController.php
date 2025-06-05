@@ -6,9 +6,9 @@
  * SPDX-License-Identifier: AGPL-3.0-or-later
  */
 
-namespace OCA\Files_PDFViewer\Controller;
+namespace OCA\CustomPDFViewer\Controller;
 
-use OCA\Files_PDFViewer\AppInfo\Application;
+use OCA\CustomPDFViewer\AppInfo\Application;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\ContentSecurityPolicy;
 use OCP\AppFramework\Http\TemplateResponse;

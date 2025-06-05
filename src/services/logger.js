@@ -6,7 +6,7 @@ import { getLoggerBuilder } from '@nextcloud/logger'
 
 // Set up logger
 const logger = getLoggerBuilder()
-	.setApp('Files_PDFViewer')
+	.setApp('custompdfviewer')
 	.detectUser()
 	.build()
 

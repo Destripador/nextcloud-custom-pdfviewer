@@ -9,7 +9,7 @@
 		@load="onIFrameLoaded" />
 	<div v-else-if="!isRichDocumentsAvailable" id="emptycontent">
 		<div class="icon-error" />
-		<h3>{{ t('files_pdfviewer', 'To view a shared PDF file, the download needs to be allowed for this file share') }}</h3>
+		<h3>{{ t('custompdfviewer', 'To view a shared PDF file, the download needs to be allowed for this file share') }}</h3>
 	</div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
 
 	computed: {
 		iframeSrc() {
-			return generateUrl('/apps/files_pdfviewer/?file={file}', {
+			return generateUrl('/apps/custompdfviewer/?file={file}', {
 				file: this.source ?? this.davPath,
 			})
 		},
@@ -236,7 +236,7 @@ export default {
 
 			const PDFViewerApplicationOptions = this.$refs.iframe.contentWindow.PDFViewerApplicationOptions
 
-			logger.debug('Initialized files_pdfviewer', PDFViewerApplicationOptions.getAll())
+			logger.debug('Initialized custompdfviewer', PDFViewerApplicationOptions.getAll())
 		},
 
 		handleWebviewerloaded() {
@@ -270,7 +270,7 @@ export default {
 			}).catch(error => {
 				logger.error('Error uploading file:', error)
 
-				showError(t('files_pdfviewer', 'File upload failed.'))
+				showError(t('custompdfviewer', 'File upload failed.'))
 
 				// Enable button again only if the upload failed; if it was
 				// successful it will be enabled again when a new annotation is

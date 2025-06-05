@@ -9,9 +9,9 @@
 /** @var array $_ */
 /** @var OCP\IURLGenerator $urlGenerator */
 $urlGenerator = $_['urlGenerator'];
-$version = \OC::$server->getAppManager()->getAppVersion('files_pdfviewer');
+$version = \OC::$server->getAppManager()->getAppVersion('custompdfviewer');
 $enableScripting = false;
-if (\OC::$server->getConfig()->getAppValue('files_pdfviewer', 'enable_scripting', 'no') === 'yes') {
+if (\OC::$server->getConfig()->getAppValue('custompdfviewer', 'enable_scripting', 'no') === 'yes') {
 	$enableScripting = true;
 }
 ?>
@@ -39,28 +39,28 @@ Adobe CMap resources are covered by their own copyright but the same license:
 See https://github.com/adobe-type-tools/cmap-resources
 -->
 <html dir="ltr" mozdisallowselectionprint>
-  <head data-workersrc="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/pdfjs/build/pdf.worker.mjs')) ?>?v=<?php p($version) ?>"
+  <head data-workersrc="<?php p($urlGenerator->linkTo('custompdfviewer', 'js/pdfjs/build/pdf.worker.mjs')) ?>?v=<?php p($version) ?>"
         data-enableScripting="<?php p($enableScripting ? true : false) ?>"
-        data-sandbox="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/pdfjs/build/pdf.sandbox.mjs'))?>"
-        data-cmapurl="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/pdfjs/web/cmaps/')) ?>"
-        data-imageresourcespath="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/pdfjs/web/images/')) ?>">
+        data-sandbox="<?php p($urlGenerator->linkTo('custompdfviewer', 'js/pdfjs/build/pdf.sandbox.mjs'))?>"
+        data-cmapurl="<?php p($urlGenerator->linkTo('custompdfviewer', 'js/pdfjs/web/cmaps/')) ?>"
+        data-imageresourcespath="<?php p($urlGenerator->linkTo('custompdfviewer', 'js/pdfjs/web/images/')) ?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="google" content="notranslate">
     <title>PDF.js viewer</title>
 
-    <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/pdfjs/web/viewer.css')) ?>?v=<?php p($version) ?>"/>
-    <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'css/viewer.css')) ?>?v=<?php p($version) ?>"/>
+    <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('custompdfviewer', 'js/pdfjs/web/viewer.css')) ?>?v=<?php p($version) ?>"/>
+    <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('custompdfviewer', 'css/viewer.css')) ?>?v=<?php p($version) ?>"/>
     <?php if ($_['minmode']):?>
-      <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'css/minmode.css')) ?>?v=<?php p($version) ?>"/>
+      <link rel="stylesheet" href="<?php p($urlGenerator->linkTo('custompdfviewer', 'css/minmode.css')) ?>?v=<?php p($version) ?>"/>
     <?php endif;?>
 
 
     <!-- This snippet is used in production (included from viewer.html) -->
-    <link rel="resource" type="application/l10n" href="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/pdfjs/web/locale/locale.json')) ?>?v=<?php p($version) ?>"/>
-    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/pdfjs/build/pdf.mjs')) ?>?v=<?php p($version) ?>" type="module"></script>
-    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/pdfjs/web/viewer.mjs')) ?>?v=<?php p($version) ?>" type="module"></script>
-    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('files_pdfviewer', 'js/files_pdfviewer-workersrc.js')) ?>?v=<?php p($version) ?>"></script>
+    <link rel="resource" type="application/l10n" href="<?php p($urlGenerator->linkTo('custompdfviewer', 'js/pdfjs/web/locale/locale.json')) ?>?v=<?php p($version) ?>"/>
+    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('custompdfviewer', 'js/pdfjs/build/pdf.mjs')) ?>?v=<?php p($version) ?>" type="module"></script>
+    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('custompdfviewer', 'js/pdfjs/web/viewer.mjs')) ?>?v=<?php p($version) ?>" type="module"></script>
+    <script nonce="<?php p(\OC::$server->getContentSecurityPolicyNonceManager()->getNonce()) ?>" src="<?php p($urlGenerator->linkTo('custompdfviewer', 'js/custompdfviewer-workersrc.js')) ?>?v=<?php p($version) ?>"></script>
   </head>
 
   <body tabindex="1">

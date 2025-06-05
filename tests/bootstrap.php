@@ -19,7 +19,7 @@ if (!defined('PHPUNIT_RUN')) {
 require_once __DIR__ . '/../../../lib/base.php';
 require_once __DIR__ . '/../../../tests/autoload.php';
 
-Server::get(IAppManager::class)->loadApp('files_pdfviewer');
+Server::get(IAppManager::class)->loadApp('custompdfviewer');
 
 if (!class_exists(TestCase::class)) {
 	require_once('PHPUnit/Autoload.php');

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace OCA\Files_PDFViewer\Listeners;
+namespace OCA\CustomPDFViewer\Listeners;
 
 use OCA\Files\Event\LoadAdditionalScriptsEvent;
-use OCA\Files_PDFViewer\AppInfo\Application;
+use OCA\CustomPDFViewer\AppInfo\Application;
 use OCP\EventDispatcher\Event;
 use OCP\EventDispatcher\IEventListener;
 use OCP\Util;
@@ -20,6 +20,6 @@ class LoadFileListListener implements IEventListener {
 		}
 
 		// Cargar el script del menú contextual personalizado
-		Util::addScript(Application::APP_ID, 'files_pdfviewer-contextmenu');
+		Util::addScript(Application::APP_ID, 'custompdfviewer-contextmenu');
 	}
 }
